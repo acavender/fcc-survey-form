@@ -1,0 +1,8 @@
+input {
+    border: 1px solid black;
+}
+
+#submit {
+    background: green;
+    color: white;
+}
