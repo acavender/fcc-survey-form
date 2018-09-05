@@ -9,80 +9,82 @@
     <!-- <script src="main.js"></script> -->
 </head>
 <body>
-    <h1 id="title">Science Fiction and Fantasy Survey</h1>
-    <p id="description">Tell us about your favorite science fiction and fantasy films, series (TV, films, and/or lit), and authors!</p>
-    <form id="survey-form" action="">
-        <div id="general-information">
-            <div>
-                <label for="name" id="name-label">Name (first name only):</label>
-                <input type="text" id="name" pattern="[A-Za-z]+" placeholder="First name" required>
+    <div id="container">
+        <h1 id="title">Science Fiction and Fantasy Survey</h1>
+        <p id="description">Tell us about your favorite science fiction and fantasy films, series (TV, films, and/or lit), and authors!</p>
+        <form id="survey-form" action="">
+            <div id="general-information">
+                <div>
+                    <label for="name" id="name-label">Name (first name only):</label>
+                    <input type="text" id="name" pattern="[A-Za-z]+" placeholder="First name" required>
+                </div>
+                <div>
+                    <label for="email" id="email-label">Email:</label>
+                    <input type="email" id="email" placeholder="username@company.com" required>
+                </div>
+                <div>
+                    <label for="number" id="number-label">Age (you must be at least 13):</label>
+                    <input type="number" id="number" min="13" max="105" placeholder="13" required>
+                </div>
+            </div>
+            <div id="favorite-film">
+                <label for="dropdown">What's your favorite science fiction or fantasy film?</label>
+                <select name="film" id="dropdown">
+                    <option value="star-trek">Anything from the <em>Star Trek</em> universe</option>
+                    <option value="star-wars">Anything from the <em>Star Wars</em> universe</option>
+                    <option value="harry-potter">Any of the <em>Harry Potter</em> films</option>
+                    <option value="ladyhawke"><em>Ladyhawke</em></option>
+                </select>
+            </div>
+            <div id="favorite-potter">
+                <p>What's your favorite film from the <em>Harry Potter</em> universe?</p>
+                <div>
+                    <label for="prisoner-of-azkaban"><em>The Prisoner of Azkaban</em></label>
+                    <input type="radio" id="prisoner-of-azkaban" name="potter-film" value="prisoner-of-azkaban">
+                </div>
+                <div>
+                    <label for="fantastic-beasts"><em>Fantastic Beasts and Where to Find Them</em></label>
+                    <input type="radio" id="fantastic-beasts" name="potter-film" value="fantastic-beasts">
+                </div>
+                <div>
+                    <label for="goblet of fire"><em>The Goblet of Fire</em></label>
+                    <input type="radio" id="goblet of fire" name="potter-film" value="goblet of fire">
+                </div>
+            </div>
+            <div id="favorite-author">
+                <p>Who are your favorite fantasy authors? Check as many as apply.</p>
+                <div>
+                    <label for="rowling">J.K. Rowling</label>
+                    <input type="checkbox" name="fav-author" value="Rowling" id="rowling">
+                </div>
+                <div>
+                    <label for="kurtz">Katherine Kurtz</label>
+                    <input type="checkbox" name="fav-author" value="Kurtz" id="kurtz">
+                </div>
+                <div>
+                    <label for="lackey">
+                </div>
+                <div>
+                    <label for="jordan">Robert Jordan</label>
+                    <input type="checkbox" name="fav-author" value="Jordan" id="jordan">
+                </div>
+                <div>
+                    <label for="anthony">Piers Anthony</label>
+                    <input type="checkbox" name="fav-author" value="Anthony" id="anthony">
+                </div>
+            </div>
+            <div id="additional-comments">
+                <p>
+                    <label for="comments">Do you have anything you'd like to add about your favorite science fiction and/or fantasy works?</label>
+                </p>
+                <div>
+                    <textarea name="additional-comments" id="comments" cols="30" rows="10"></textarea>
+                </div>
             </div>
             <div>
-                <label for="email" id="email-label">Email:</label>
-                <input type="email" id="email" placeholder="username@company.com" required>
+                <input type="submit" id="submit" value="Submit form">
             </div>
-            <div>
-                <label for="number" id="number-label">Age (you must be at least 13):</label>
-                <input type="number" id="number" min="13" max="105" placeholder="13" required>
-            </div>
-        </div>
-        <div id="favorite-film">
-            <label for="dropdown">What's your favorite science fiction or fantasy film?</label>
-            <select name="film" id="dropdown">
-                <option value="star-trek">Anything from the <em>Star Trek</em> universe</option>
-                <option value="star-wars">Anything from the <em>Star Wars</em> universe</option>
-                <option value="harry-potter">Any of the <em>Harry Potter</em> films</option>
-                <option value="ladyhawke"><em>Ladyhawke</em></option>
-            </select>
-        </div>
-        <div id="favorite-potter">
-            <p>What's your favorite film from the <em>Harry Potter</em> universe?</p>
-            <div>
-                <label for="prisoner-of-azkaban"><em>The Prisoner of Azkaban</em></label>
-                <input type="radio" id="prisoner-of-azkaban" name="potter-film" value="prisoner-of-azkaban">
-            </div>
-            <div>
-                <label for="fantastic-beasts"><em>Fantastic Beasts and Where to Find Them</em></label>
-                <input type="radio" id="fantastic-beasts" name="potter-film" value="fantastic-beasts">
-            </div>
-            <div>
-                <label for="goblet of fire"><em>The Goblet of Fire</em></label>
-                <input type="radio" id="goblet of fire" name="potter-film" value="goblet of fire">
-            </div>
-        </div>
-        <div id="favorite-author">
-            <p>Who are your favorite fantasy authors? Check as many as apply.</p>
-            <div>
-                <label for="rowling">J.K. Rowling</label>
-                <input type="checkbox" name="fav-author" value="Rowling" id="rowling">
-            </div>
-            <div>
-                <label for="kurtz">Katherine Kurtz</label>
-                <input type="checkbox" name="fav-author" value="Kurtz" id="kurtz">
-            </div>
-            <div>
-                <label for="lackey">
-            </div>
-            <div>
-                <label for="jordan">Robert Jordan</label>
-                <input type="checkbox" name="fav-author" value="Jordan" id="jordan">
-            </div>
-            <div>
-                <label for="anthony">Piers Anthony</label>
-                <input type="checkbox" name="fav-author" value="Anthony" id="anthony">
-            </div>
-        </div>
-        <div id="additional-comments">
-            <p>
-                <label for="comments">Do you have anything you'd like to add about your favorite science fiction and/or fantasy works?</label>
-            </p>
-            <div>
-                <textarea name="additional-comments" id="comments" cols="30" rows="10"></textarea>
-            </div>
-        </div>
-        <div>
-            <input type="submit" id="submit" value="Submit form">
-        </div>
-    </form>
+        </form>
+    </div>
 </body>
 </html>
